@@ -179,6 +179,7 @@ const CartDisplay = ({ productData, setProductData }) => {
     <CartDisplayContainer>
       {productData.objectData.map((item) => (
         <div key={item.prodId}>
+          <hr />
           <span>{item.prodName}</span> : $<span>{item.price}</span>
           <PrdctQtyBtn id={item.prodId} onClick={handleSubtraction}>
             -
@@ -195,9 +196,11 @@ const CartDisplay = ({ productData, setProductData }) => {
       ))}
 
       <div>
+        <hr />
         <StrongFont>Items In Cart</StrongFont> :
         {productData.finalTotalProductCount}
         <StrongFont1>Total Price</StrongFont1> : ${productData.finalTotalAmount}
+        <hr />
       </div>
     </CartDisplayContainer>
   );
